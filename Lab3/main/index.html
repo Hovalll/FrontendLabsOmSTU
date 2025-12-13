@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 3</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Шапка с навигацией -->
+    <header>
+        <h1>Мой первый сайт</h1>
+        <nav>
+            <a href="#section1">Раздел 1</a>
+            <a href="#section2">Раздел 2</a>
+            <a href="#section3">Раздел 3</a>
+            <a href="#interactive">Интерактив</a>
+            <a href="#slider-section">Слайдер</a>
+        </nav>
+    </header>
+
+    <!-- Секция 1 -->
+    <section id="section1" class="section">
+        <h2>Раздел 1: Обо мне</h2>
+        <img src="img/photo_1_2025-11-30_12-34-20.jpg" alt="Пример изображения">
+        <p>Это моя первая веб-страница. Я учусь создавать сайты.</p>
+        
+        <h3>Мои хобби:</h3>
+        <ul>
+            <li>Программирование</li>
+            <li>Чтение</li>
+            <li>Спорт</li>
+        </ul>
+    </section>
+
+    <!-- Секция 2 -->
+    <section id="section2" class="section">
+        <h2>Раздел 2: Полезные ссылки</h2>
+        <p>Вот разные типы ссылок:</p>
+        <div class="links">
+            <a href="https://google.com" target="_blank" class="link external">Внешняя ссылка на Google</a>
+            <a href="mailto:example@mail.ru" class="link email">Ссылка на почту</a>
+            <a href="tel:+79161234567" class="link phone">Ссылка на телефон</a>
+        </div>
+    </section>
+
+    <!-- Секция 3 -->
+    <section id="section3" class="section">
+        <h2>Раздел 3: Таблица</h2>
+        <table>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Возраст</th>
+                <th>Город</th>
+            </tr>
+            <tr>
+                <td>Иван</td>
+                <td>Иванов</td>
+                <td>20</td>
+                <td>Москва</td>
+            </tr>
+            <tr>
+                <td>Петр</td>
+                <td>Петров</td>
+                <td>22</td>
+                <td>Санкт-Петербург</td>
+            </tr>
+            <tr>
+                <td>Анна</td>
+                <td>Сидорова</td>
+                <td>19</td>
+                <td>Казань</td>
+            </tr>
+            <tr>
+                <td>Мария</td>
+                <td>Кузнецова</td>
+                <td>21</td>
+                <td>Новосибирск</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Новая секция для интерактивной таблицы ЛР3 -->
+    <section id="interactive" class="section">
+        <h2>Интерактивная таблица (ЛР3)</h2>
+        
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" placeholder="Введите имя">
+            <div class="error-message" id="name-error">Поле "Имя" обязательно для заполнения</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Введите email">
+            <div class="error-message" id="email-error">Введите корректный email адрес</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="text" id="phone" placeholder="Введите телефон">
+            <div class="error-message" id="phone-error">Поле "Телефон" обязательно для заполнения</div>
+        </div>
+        
+        <button class="btn" id="add-btn">Добавить в таблицу</button>
+        <div class="success-message" id="success-message">Запись успешно добавлена!</div>
+        
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Email</th>
+                    <th>Телефон</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Данные загружаются из localStorage -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Новая секция для слайдера ЛР3 -->
+    <section id="slider-section" class="section">
+        <h2>Интерактивный слайдер (ЛР3)</h2>
+        
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide slide-1">
+                    <h3>Добро пожаловать!</h3>
+                    <p>Это первый слайд нашего интерактивного слайдера</p>
+                </div>
+                <div class="slide slide-2">
+                    <h3>Преимущества</h3>
+                    <p>Второй слайд демонстрирует преимущества нашего продукта</p>
+                </div>
+                <div class="slide slide-3">
+                    <h3>Функциональность</h3>
+                    <p>Третий слайд показывает основные функции приложения</p>
+                </div>
+                <div class="slide slide-4">
+                    <h3>Результаты</h3>
+                    <p>Четвертый слайд демонстрирует достигнутые результаты</p>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-btn" id="prev-btn">‹</button>
+                <button class="slider-btn" id="next-btn">›</button>
+            </div>
+        </div>
+        
+        <div class="slider-dots" id="slider-dots">
+            <!-- Точки добавляются через JavaScript -->
+        </div>
+    </section>
+
+    <script>
+        // ========== КОД ДЛЯ ТАБЛИЦЫ ==========
+        
+        // Инициализация данных таблицы
+        let tableData = JSON.parse(localStorage.getItem('tableData')) || [
+            { name: "Иван", email: "ivan@example.com", phone: "+7 (912) 345-67-89" },
+            { name: "Мария", email: "maria@example.com", phone: "+7 (923) 456-78-90" },
+            { name: "Петр", email: "petr@example.com", phone: "+7 (934) 567-89-01" }
+        ];
+
+        // Элементы DOM для таблицы
+        const tableBody = document.getElementById('table-body');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const addButton = document.getElementById('add-btn');
+        const successMessage = document.getElementById('success-message');
+
+        // Функция для отображения данных таблицы
+        function renderTable() {
+            tableBody.innerHTML = '';
+            
+            tableData.forEach((item, index) => {
+                const row = document.createElement('tr');
+                
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>${item.email}</td>
+                    <td>${item.phone}</td>
+                    <td>
+                        <button class="delete-btn" data-index="${index}">Удалить</button>
+                    </td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+            
+            // Добавляем обработчики для кнопок удаления
+            document.querySelectorAll('.delete-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    deleteRow(index);
+                });
+            });
+            
+            // Сохраняем данные в localStorage
+            localStorage.setItem('tableData', JSON.stringify(tableData));
+        }
+
+        // Функция для удаления строки
+        function deleteRow(index) {
+            tableData.splice(index, 1);
+            renderTable();
+        }
+
+        // Функция для валидации формы
+        function validateForm() {
+            let isValid = true;
+            
+            // Сбрасываем стили ошибок
+            document.querySelectorAll('.error-message').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('input').forEach(el => {
+                el.classList.remove('error');
+            });
+            
+            // Проверка имени
+            if (!nameInput.value.trim()) {
+                document.getElementById('name-error').style.display = 'block';
+                nameInput.classList.add('error');
+                isValid = false;
+            }
+            
+            // Проверка email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                document.getElementById('email-error').style.display = 'block';
+                emailInput.classList.add('error');
+                isValid = false;
+            }
+            
+            // Проверка телефона
+            if (!phoneInput.value.trim()) {
+                document.getElementById('phone-error').style.display = 'block';
+                phoneInput.classList.add('error');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+
+        // Функция для добавления новой строки
+        function addRow() {
+            if (!validateForm()) return;
+            
+            const newRow = {
+                name: nameInput.value.trim(),
+                email: emailInput.value.trim(),
+                phone: phoneInput.value.trim()
+            };
+            
+            tableData.push(newRow);
+            renderTable();
+            
+            // Очищаем форму
+            nameInput.value = '';
+            emailInput.value = '';
+            phoneInput.value = '';
+            
+            // Показываем сообщение об успехе
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
+        }
+
+        // Обработчик для кнопки добавления
+        addButton.addEventListener('click', addRow);
+
+        // Обработчики для отправки формы по нажатию Enter
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    addRow();
+                }
+            });
+        });
+
+        // ========== КОД ДЛЯ СЛАЙДЕРА ==========
+        
+        const slider = document.getElementById('slider');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const sliderDots = document.getElementById('slider-dots');
+        
+        let currentSlide = 0;
+        let slideInterval;
+        const totalSlides = 4;
+
+        // Создаем точки для навигации
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('data-slide', i);
+            sliderDots.appendChild(dot);
+            
+            dot.addEventListener('click', function() {
+                const slideIndex = parseInt(this.getAttribute('data-slide'));
+                goToSlide(slideIndex);
+            });
+        }
+
+        // Функция для перехода к определенному слайду
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Обновляем активную точку
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+            
+            // Перезапускаем автоматическое переключение
+            resetInterval();
+        }
+
+        // Функция для перехода к следующему слайду
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }
+
+        // Функция для перехода к предыдущему слайду
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            goToSlide(currentSlide);
+        }
+
+        // Функция для сброса интервала автоматического переключения
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // Обработчики для кнопок навигации
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Запускаем автоматическое переключение
+        resetInterval();
+
+        // Останавливаем автоматическое переключение при наведении на слайдер
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+
+        // Возобновляем автоматическое переключение при уходе курсора
+        slider.addEventListener('mouseleave', resetInterval);
+
+        // Инициализация таблицы при загрузке страницы
+        renderTable();
+    </script>
+</body>
+</html>

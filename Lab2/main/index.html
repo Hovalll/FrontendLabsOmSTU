@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechConf 2024 | IT Conference</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Block -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="logo">
+                    <span class="logo__text">TechConf</span>
+                    <span class="logo__year">2024</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#speakers" class="nav__link">Спикеры</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#schedule" class="nav__link">Расписание</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#pricing" class="nav__link">Билеты</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contacts" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="button button--primary">Купить билет</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Block -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">TechConf 2024</h1>
+                <p class="hero__subtitle">Крупнейшая IT-конференция года</p>
+                <p class="hero__date">15-17 ноября | Москва</p>
+                <div class="hero__actions">
+                    <button class="button button--large button--accent">Зарегистрироваться</button>
+                    <button class="button button--large button--outline">Узнать больше</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Block -->
+    <section class="speakers" id="speakers">
+        <div class="container">
+            <h2 class="section-title">Наши спикеры</h2>
+            <div class="speakers__grid">
+                <div class="speaker-card">
+                    <div class="speaker-card__avatar">
+                        <img src="img/molodaa-delovaa-zensina-szimaet-ruki-smotrit-s-obnadezivausim-vyrazeniem-lica-ulybaetsa-i-s-neterpeniem-smotrit-v-kameru-stoa-na-belom-fone.jpg" alt="Анна Петрова" class="speaker-card__image">
+                    </div>
+                    <h3 class="speaker-card__name">Анна Петрова</h3>
+                    <p class="speaker-card__company">Lead Developer at TechCorp</p>
+                    <p class="speaker-card__topic">Искусственный интеллект в веб-разработке</p>
+                </div>
+                
+                <div class="speaker-card">
+                    <div class="speaker-card__avatar">
+                        <img src="img/zakryt-ludei-na-delovoi-vstrece.jpg" alt="Иван Сидоров" class="speaker-card__image">
+                    </div>
+                    <h3 class="speaker-card__name">Галина Николаевна</h3>
+                    <p class="speaker-card__company">CTO at StartupLab</p>
+                    <p class="speaker-card__topic">Микросервисная архитектура 2024</p>
+                </div>
+                
+                <div class="speaker-card speaker-card--featured">
+                    <div class="speaker-card__avatar">
+                        <img src="img/krupnym-planom-terapevt-obsuzdaet-s-lud-mi.jpg" alt="Мария Иванова" class="speaker-card__image">
+                        <div class="speaker-card__badge">Ключевой спикер</div>
+                    </div>
+                    <h3 class="speaker-card__name">Мария Иванова</h3>
+                    <p class="speaker-card__company">Google</p>
+                    <p class="speaker-card__topic">Будущее Web3 технологий</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Block -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <h2 class="section-title">Расписание</h2>
+            <div class="schedule__list">
+                <div class="schedule-item">
+                    <div class="schedule-item__time">10:00 - 11:00</div>
+                    <div class="schedule-item__content">
+                        <h3 class="schedule-item__title">Открытие конференции</h3>
+                        <p class="schedule-item__speaker">Организационный комитет</p>
+                    </div>
+                </div>
+                <div class="schedule-item schedule-item--highlighted">
+                    <div class="schedule-item__time">11:00 - 12:00</div>
+                    <div class="schedule-item__content">
+                        <h3 class="schedule-item__title">Будущее Web3 технологий</h3>
+                        <p class="schedule-item__speaker">Мария Иванова (Google)</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-item__time">12:30 - 13:30</div>
+                    <div class="schedule-item__content">
+                        <h3 class="schedule-item__title">ИИ в веб-разработке</h3>
+                        <p class="schedule-item__speaker">Анна Петрова (TechCorp)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Block -->
+    <section class="sponsors">
+        <div class="container">
+            <h2 class="section-title">Наши спонсоры</h2>
+            <div class="sponsors__grid">
+                <div class="sponsor-logo">
+                    <img src="img/puch-svg-1.svg" alt="TechCorp" class="sponsor-logo__image">
+                </div>
+                <div class="sponsor-logo">
+                    <img src="img/quadlabs-logo-svg-vector.svg" alt="StartupLab" class="sponsor-logo__image">
+                </div>
+                <div class="sponsor-logo">
+                    <img src="img/svg-6.svg" alt="DevHub" class="sponsor-logo__image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Block -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Выберите билет</h2>
+            <div class="pricing__grid">
+                <div class="price-card">
+                    <h3 class="price-card__title">Стандарт</h3>
+                    <div class="price-card__price">15 000 ₽</div>
+                    <ul class="price-card__features">
+                        <li class="price-card__feature">Доступ ко всем докладам</li>
+                        <li class="price-card__feature">Раздаточные материалы</li>
+                        <li class="price-card__feature">Кофе-брейки</li>
+                    </ul>
+                    <button class="button button--primary">Выбрать</button>
+                </div>
+                
+                <div class="price-card price-card--popular">
+                    <div class="price-card__badge">Популярный</div>
+                    <h3 class="price-card__title">VIP</h3>
+                    <div class="price-card__price">25 000 ₽</div>
+                    <ul class="price-card__features">
+                        <li class="price-card__feature">Все из Стандарт</li>
+                        <li class="price-card__feature">Обед со спикерами</li>
+                        <li class="price-card__feature">Закрытый воркшоп</li>
+                        <li class="price-card__feature">Подарочный набор</li>
+                    </ul>
+                    <button class="button button--accent">Выбрать</button>
+                </div>
+                
+                <div class="price-card">
+                    <h3 class="price-card__title">Студенческий</h3>
+                    <div class="price-card__price">7 500 ₽</div>
+                    <ul class="price-card__features">
+                        <li class="price-card__feature">Доступ ко всем докладам</li>
+                        <li class="price-card__feature">Раздаточные материалы</li>
+                    </ul>
+                    <button class="button button--primary">Выбрать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Block -->
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <div class="logo logo--footer">
+                        <span class="logo__text">TechConf</span>
+                        <span class="logo__year">2024</span>
+                    </div>
+                    <p class="footer__description">
+                        Крупнейшая IT-конференция года с участием ведущих экспертов индустрии.
+                    </p>
+                </div>
+                <div class="footer__contacts">
+                    <h3 class="footer__title">Контакты</h3>
+                    <p class="footer__contact">Email: info@techconf.ru</p>
+                    <p class="footer__contact">Телефон: +7 (495) 123-45-67</p>
+                    <p class="footer__contact">Адрес: Москва, ул. Технологическая, 15</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechConf. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

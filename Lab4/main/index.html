@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 4: Асинхронный JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Лабораторная работа 4: Асинхронный JS</h1>
+            <p class="description">Эта страница получает данные о случайных пользователях из открытого API (Random User API) с использованием fetch и отображает их в виде карточек.</p>
+        </header>
+        
+        <div class="controls">
+            <button id="loadUsers">
+                <i class="fas fa-users"></i> Загрузить пользователей
+            </button>
+            <button id="clearUsers">
+                <i class="fas fa-trash"></i> Очистить список
+            </button>
+        </div>
+        
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            Загрузка данных...
+        </div>
+        
+        <div id="error" class="error-message" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i> Произошла ошибка при загрузке данных. Пожалуйста, проверьте подключение к интернету и попробуйте еще раз.
+        </div>
+        
+        <div id="usersContainer" class="users-grid">
+            <!-- Сюда будут добавляться карточки пользователей -->
+        </div>
+        
+        <footer>
+            <p>Лабораторная работа по асинхронному JavaScript. Данные предоставлены Random User API.</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
