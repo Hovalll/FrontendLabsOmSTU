@@ -1,0 +1,251 @@
+.apod {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #4cc9f0;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, #4cc9f0, #4361ee);
+  border-radius: 2px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: rgba(26, 26, 46, 0.7);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+.dateControl {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.dateControl label {
+  font-weight: bold;
+  color: #72efdd;
+  font-size: 1.1rem;
+}
+
+.dateInput {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #4cc9f0;
+  background-color: rgba(10, 14, 23, 0.8);
+  color: white;
+  font-size: 1rem;
+  min-width: 200px;
+  transition: all 0.3s;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #72efdd;
+  box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.2);
+}
+
+.apodCard {
+  background: rgba(26, 26, 46, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(76, 201, 240, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.apodHeader {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(76, 201, 240, 0.2);
+  background: rgba(10, 14, 23, 0.5);
+}
+
+.apodHeader h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #72efdd;
+  line-height: 1.3;
+}
+
+.apodDate {
+  color: #b8d4e3;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.copyright {
+  color: #4cc9f0;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.mediaContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #0a0e17;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apodImage {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  display: block;
+  padding: 20px;
+}
+
+.apodExplanation {
+  padding: 2rem;
+}
+
+.apodExplanation h3 {
+  color: #4cc9f0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid rgba(76, 201, 240, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.apodExplanation p {
+  color: #b8d4e3;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.apiInfo {
+  background: rgba(26, 46, 53, 0.7);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #4cc9f0;
+  margin-top: 2rem;
+}
+
+.apiInfo h3 {
+  color: #4cc9f0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.apiInfo p {
+  color: #b8d4e3;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.apiInfo a {
+  color: #72efdd;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.apiInfo a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .apodImage {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.2rem;
+  }
+  
+  .dateControl {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .dateInput {
+    width: 100%;
+    min-width: unset;
+  }
+  
+  .apodHeader {
+    padding: 1.2rem;
+  }
+  
+  .apodHeader h2 {
+    font-size: 1.5rem;
+  }
+  
+  .apodExplanation {
+    padding: 1.5rem;
+  }
+  
+  .apodExplanation p {
+    font-size: 1rem;
+  }
+  
+  .mediaContainer {
+    min-height: 300px;
+  }
+  
+  .apodImage {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .apod {
+    padding: 10px 0;
+  }
+  
+  .apodHeader h2 {
+    font-size: 1.3rem;
+  }
+  
+  .apodExplanation h3 {
+    font-size: 1.3rem;
+  }
+}

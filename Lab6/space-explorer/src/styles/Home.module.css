@@ -1,0 +1,239 @@
+.home {
+  padding: 20px 0;
+}
+
+.hero {
+  background: linear-gradient(rgba(10, 14, 23, 0.9), rgba(10, 14, 23, 0.95)),
+              url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3') 
+              center/cover no-repeat;
+  border-radius: 15px;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(10, 14, 23, 0.9) 70%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #4cc9f0, #4361ee, #7209b7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 5s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: #b8d4e3;
+  line-height: 1.8;
+}
+
+.features {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #4cc9f0;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #4cc9f0, #4361ee);
+  border-radius: 2px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.featureCard {
+  background: rgba(26, 26, 46, 0.7);
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(76, 201, 240, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(76, 201, 240, 0.15);
+  border-color: rgba(76, 201, 240, 0.3);
+}
+
+.featureIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.featureCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #72efdd;
+}
+
+.featureCard p {
+  color: #b8d4e3;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.featureLink {
+  color: #4cc9f0;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap 0.3s;
+}
+
+.featureLink:hover {
+  gap: 10px;
+}
+
+.aboutPreview {
+  text-align: center;
+  background: rgba(26, 26, 46, 0.7);
+  border-radius: 15px;
+  padding: 3rem;
+  border: 1px solid rgba(76, 201, 240, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutPreview::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: radial-gradient(circle at center, rgba(76, 201, 240, 0.05) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.aboutPreview p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #b8d4e3;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .featureCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .aboutPreview {
+    padding: 2rem 1.5rem;
+  }
+  
+  .aboutPreview p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.7rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  
+  .featureIcon {
+    font-size: 2.8rem;
+  }
+  
+  .featureCard h3 {
+    font-size: 1.3rem;
+  }
+}
